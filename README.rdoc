@@ -1,0 +1,3 @@
+= BasicContent
+
+Basic content is for appattrip application, it will provide basic content text, image with text and web url.

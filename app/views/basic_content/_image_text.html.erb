@@ -1,0 +1,24 @@
+<%= f.fields_for :contentable, contentable do |ca| %>
+  <%= ca.hidden_field :type %>
+  <%= ca.hidden_field :multilingual_page_id %>
+  <%= ca.hidden_field :id %>
+  <br/>
+
+  <div>
+    <%= ca.label :description, t('content_types.text') %>
+    <%= ca.text_area :description  %>
+  </div>
+  <br/>
+
+  <div>
+    <%= ca.label :image, t('content_types.image') %>
+    <%= ca.file_field :image %>
+  </div>
+
+  <div>
+    <%= t('hotels.curr_image') %><br />
+    <div id="content-current-image">
+      <%= image_tag contentable.image.url(:thumb) %>
+    </div>
+  </div>
+<% end %>

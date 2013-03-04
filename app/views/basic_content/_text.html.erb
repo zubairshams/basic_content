@@ -1,0 +1,10 @@
+<%= f.fields_for :contentable, contentable do |ca| %>
+  <%= ca.hidden_field :type %>
+  <%= ca.hidden_field :multilingual_page_id %>
+  <%= ca.hidden_field :id %>
+
+  <div>
+    <%= ca.label :description, t('content_types.text') + '*' %>
+    <%= ca.text_area :description %>
+  </div>
+<% end %>
