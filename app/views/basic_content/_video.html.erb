@@ -1,0 +1,25 @@
+<%= f.fields_for :contentable, contentable do |c| %>
+  <%= c.hidden_field :type %>
+  <%= c.hidden_field :multilingual_page_id %>
+  <%= c.hidden_field :id %>
+
+  <br/>
+  <div>
+    <%= c.label :url, t('content_types.video_url') %>
+    <p> <%= t('content_types.video_url_instructions')%> </p>
+    <%= c.url_field :url  %>
+  </div>
+  <br>
+  <h4>OR</h4>
+  <br/>
+  <div>
+    <%= c.label :video_username, t('content_types.video_channel') %>
+    <p> <%= t('content_types.video_channel_instructions')%> </p>
+    <%= c.text_field :video_username  %>
+  </div>
+  <br/>
+<% end %>
+
+
+
+

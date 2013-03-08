@@ -1,18 +1,18 @@
-<%= f.fields_for :contentable, contentable do |ca| %>
-  <%= ca.hidden_field :type %>
-  <%= ca.hidden_field :multilingual_page_id %>
-  <%= ca.hidden_field :id %>
+<%= f.fields_for :contentable, contentable do |c| %>
+  <%= c.hidden_field :type %>
+  <%= c.hidden_field :multilingual_page_id %>
+  <%= c.hidden_field :id %>
   <br/>
 
   <div>
-    <%= ca.label :description, t('content_types.text') %>
-    <%= ca.text_area :description  %>
+    <%= c.label :description, t('content_types.text') %>
+    <%= c.text_area :description  %>
   </div>
   <br/>
 
   <div>
-    <%= ca.label :image, t('content_types.image') %>
-    <%= ca.file_field :image %>
+    <%= c.label :image, t('content_types.image') %>
+    <%= c.file_field :image %>
   </div>
 
   <div>

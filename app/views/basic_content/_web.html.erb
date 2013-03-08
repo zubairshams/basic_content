@@ -1,10 +1,10 @@
-<%= f.fields_for :contentable, contentable do |ca| %>
-  <%= ca.hidden_field :type %>
-  <%= ca.hidden_field :multilingual_page_id %>
-  <%= ca.hidden_field :id %>
+<%= f.fields_for :contentable, contentable do |c| %>
+  <%= c.hidden_field :type %>
+  <%= c.hidden_field :multilingual_page_id %>
+  <%= c.hidden_field :id %>
 
   <div>
-    <%= ca.label :url, t('content_types.url') + '*' %>
-    <%= ca.url_field :url %>
+    <%= c.label :url, t('content_types.url') + '*' %>
+    <%= c.url_field :url %>
   </div>
 <% end %>
