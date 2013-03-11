@@ -21,11 +21,17 @@
       <%= image_tag contentable.image.url(:thumb) %>
     </div>
   </div>
+  <br />
 
   <div>
-    <%= c.label t('pages.orientation') %>
-    <%= c.select :text_position, MultilingualContentType::TEXT_POS.collect {|key,value| [value, key]} %>
+    <%= c.label :phone_number, t('content_types.phone_no') %>
+    <%= c.text_field :phone_number %>
   </div>
-  <br/><br/>
+  <br />
 
+  <div>
+    <%= c.label :disable_image, t('content_types.disable_image') %>
+    <%= c.check_box :disable_image %>
+  </div>
+  <br />
 <% end %>
